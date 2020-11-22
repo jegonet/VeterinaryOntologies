@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person"
      versionIRI="urn:absolute:Person">
+    <Prefix name="" IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -23,6 +24,18 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#tieneVida"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#puedeMorir"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#puedeMorirAccidente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#puedeMorirEnfermo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#puedeMorirViejo"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Humano"/>
@@ -44,6 +57,42 @@
         <ObjectProperty IRI="#tieneVida"/>
         <Class IRI="#SerVivo"/>
     </ObjectPropertyDomain>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#puedeMorir"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#puedeMorirAccidente"/>
+        <DataProperty IRI="#puedeMorir"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#puedeMorirEnfermo"/>
+        <DataProperty IRI="#puedeMorir"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#puedeMorirViejo"/>
+        <DataProperty IRI="#puedeMorir"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#puedeMorir"/>
+        <Class IRI="#SerVivo"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#puedeMorir"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#puedeMorirAccidente"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#puedeMorirEnfermo"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#puedeMorirViejo"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
 </Ontology>
 
 
