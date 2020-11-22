@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota"
      versionIRI="urn:absolute:Mascota">
+    <Prefix name="" IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -54,14 +55,6 @@
         <Class IRI="#Salvaje"/>
         <Class IRI="#Animal"/>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#diagnostica"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#tieneMascota"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#diagnostica"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>

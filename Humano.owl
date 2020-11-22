@@ -41,14 +41,6 @@
         <Class IRI="#Humano"/>
         <Class IRI="#SerVivo"/>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#tieneOficio"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#tieneVida"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#tieneOficio"/>
         <Class IRI="#Humano"/>
@@ -57,10 +49,6 @@
         <ObjectProperty IRI="#tieneVida"/>
         <Class IRI="#SerVivo"/>
     </ObjectPropertyDomain>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#puedeMorir"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#puedeMorirAccidente"/>
         <DataProperty IRI="#puedeMorir"/>

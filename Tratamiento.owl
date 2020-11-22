@@ -54,14 +54,6 @@
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
     </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#pagaTratamiento"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#realizaTratamiento"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
@@ -122,10 +114,6 @@
         <ObjectProperty IRI="#realizaTratamiento"/>
         <Class IRI="#Tratamiento"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#pagoPendiente"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
@@ -217,14 +205,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#pagoPendiente"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>

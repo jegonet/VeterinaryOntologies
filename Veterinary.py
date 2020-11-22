@@ -45,6 +45,8 @@ pr_ind = Tratamiento("Desparacitar")
 ##############
 #with onto:
 #	sync_reasoner(infer_property_values = True)
+with onto:
+	sync_reasoner(infer_property_values = True)
 
 #print(list(default_world.inconsistent_classes()))
 
