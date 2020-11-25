@@ -64,7 +64,7 @@
     </ClassAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#diagnostica"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#tieneMascota"/>

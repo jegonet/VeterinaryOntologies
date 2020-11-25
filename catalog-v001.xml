@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1606178266359" name="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota" uri="Mascota.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1606178266359" name="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad" uri="Enfermedad.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1606178266359" name="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio" uri="Profesion.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1606178266359" name="http://www.semanticweb.org/administrador/ontologies/2020/10/person" uri="Humano.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1606178266359" name="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento" uri="Tratamiento.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1606274525025" name="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota" uri="Mascota.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1606274525025" name="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad" uri="Enfermedad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1606274525025" name="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio" uri="Profesion.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1606274525025" name="http://www.semanticweb.org/administrador/ontologies/2020/10/person" uri="Humano.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1606274525025" name="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento" uri="Tratamiento.owl"/>
     </group>
 </catalog>

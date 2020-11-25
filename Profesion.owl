@@ -27,6 +27,9 @@
         <Class IRI="#IngenieriaSistemas"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Militar"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Profesion"/>
     </Declaration>
     <Declaration>
@@ -59,6 +62,10 @@
     <SubClassOf>
         <Class IRI="#IngenieriaSistemas"/>
         <Class IRI="#Ingenieria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Militar"/>
+        <Class IRI="#Profesion"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProfesionSalud"/>
