@@ -33,6 +33,12 @@
         <DataProperty IRI="#pagoPendiente"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#valorPagoPendiente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#valorTratamiento"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Castracion"/>
     </Declaration>
     <Declaration>
@@ -70,7 +76,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#realizaTratamiento"/>
         <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+        <NamedIndividual IRI="#DiagnosticoGeneral"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
@@ -86,6 +92,11 @@
         <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave"/>
         <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#valorTratamiento"/>
+        <NamedIndividual IRI="#DiagnosticoGeneral"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#long">30000</Literal>
     </DataPropertyAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#pagaTratamiento"/>
@@ -115,10 +126,107 @@
         <DataProperty IRI="#pagoPendiente"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#valorPagoPendiente"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#valorTratamiento"/>
+        <Class IRI="#Tratamiento"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#pagoPendiente"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#valorPagoPendiente"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#valorTratamiento"/>
+        <Datatype abbreviatedIRI="xsd:long"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>pagoPendiente</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#realizaTratamiento"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#t"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
+                <Variable IRI="#h"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pagoPendiente"/>
+                <Variable IRI="#h"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>calcularValorPago</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#realizaTratamiento"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#t"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
+                <Variable IRI="#h"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#valorTratamiento"/>
+                <Variable IRI="#t"/>
+                <Variable IRI="#valor"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#valorPagoPendiente"/>
+                <Variable IRI="#h"/>
+                <Variable IRI="#valor"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
     <DLSafeRule>
         <Annotation>
             <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
@@ -153,39 +261,6 @@
             <DataPropertyAtom>
                 <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
                 <Variable IRI="#m"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>pagoPendiente</Literal>
-        </Annotation>
-        <Body>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#realizaTratamiento"/>
-                <Variable IRI="#v"/>
-                <Variable IRI="#m"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
-                <Variable IRI="#h"/>
-                <Variable IRI="#m"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <DataPropertyAtom>
-                <DataProperty IRI="#pagoPendiente"/>
-                <Variable IRI="#h"/>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
             </DataPropertyAtom>
         </Head>
