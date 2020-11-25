@@ -37,10 +37,17 @@
     <Declaration>
         <DataProperty IRI="#puedeMorirViejo"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Luis"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Humano"/>
         <Class IRI="#SerVivo"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Humano"/>
+        <NamedIndividual IRI="#Luis"/>
+    </ClassAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#tieneOficio"/>
         <Class IRI="#Humano"/>
@@ -63,6 +70,18 @@
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#puedeMorir"/>
+        <Class IRI="#SerVivo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#puedeMorirAccidente"/>
+        <Class IRI="#SerVivo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#puedeMorirEnfermo"/>
+        <Class IRI="#SerVivo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#puedeMorirViejo"/>
         <Class IRI="#SerVivo"/>
     </DataPropertyDomain>
     <DataPropertyRange>

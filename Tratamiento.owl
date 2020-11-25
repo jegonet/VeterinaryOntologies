@@ -15,6 +15,12 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>file:/C:/Users/Administrador/Documents/U/Inteligentes/VeterinaryOntologies/VeterinaryOntologies/Enfermedad.owl</Import>
     <Declaration>
+        <Class IRI="#Invasivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoInvasivo"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Tratamiento"/>
     </Declaration>
     <Declaration>
@@ -25,6 +31,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#pagoPendiente"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Gato"/>
@@ -51,9 +63,103 @@
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#IngenieriaAmbiental"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#IngenieriaSistemas"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Invasivo"/>
+        <Class IRI="#Tratamiento"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NoInvasivo"/>
+        <Class IRI="#Tratamiento"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Animal"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tratamiento"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Moquillo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#CarlosVeterinario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#CarlosVeterinario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Luis"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#puedeEnfermar"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#realizaTratamiento"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Luis"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Moquillo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
@@ -65,6 +171,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#tieneOficio"/>
@@ -107,6 +217,10 @@
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#pagaTratamiento"/>
         <Class IRI="#Tratamiento"/>
     </ObjectPropertyRange>
@@ -114,90 +228,6 @@
         <ObjectProperty IRI="#realizaTratamiento"/>
         <Class IRI="#Tratamiento"/>
     </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirAccidente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirAccidente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirAccidente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirAccidente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirViejo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirViejo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirViejo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirViejo"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#pagoPendiente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#pagoPendiente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#pagoPendiente"/>
-        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
-    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#pagoPendiente"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
@@ -207,13 +237,80 @@
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#pagoPendiente"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>enfermedadMuerte</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#puedeEnfermar"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#e"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave"/>
+                <Variable IRI="#e"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
+                <Variable IRI="#m"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>pagoPendiente</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#realizaTratamiento"/>
+                <Variable IRI="#v"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
+                <Variable IRI="#h"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pagoPendiente"/>
+                <Variable IRI="#h"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
 </Ontology>
 
 

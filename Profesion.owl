@@ -15,32 +15,71 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>file:/C:/Users/Administrador/Documents/U/Inteligentes/VeterinaryOntologies/VeterinaryOntologies/Humano.owl</Import>
     <Declaration>
+        <Class IRI="#Contaduria"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Ingenieria"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#IngenieriaAmbiental"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IngenieriaSistemas"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Profesion"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ProfesionSalud"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SaludAnimales"/>
+        <Class IRI="#Veterinaria"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#identificaEnfermedad"/>
+        <ObjectProperty IRI="#identificaEnfermedad"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CarlosVeterinario"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MariaVeterinaria"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Contaduria"/>
+        <Class IRI="#Profesion"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ingenieria"/>
         <Class IRI="#Profesion"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#IngenieriaAmbiental"/>
+        <Class IRI="#Ingenieria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IngenieriaSistemas"/>
+        <Class IRI="#Ingenieria"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ProfesionSalud"/>
         <Class IRI="#Profesion"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SaludAnimales"/>
+        <Class IRI="#Veterinaria"/>
         <Class IRI="#ProfesionSalud"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Veterinaria"/>
+        <NamedIndividual IRI="#CarlosVeterinario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Veterinaria"/>
+        <NamedIndividual IRI="#MariaVeterinaria"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#identificaEnfermedad"/>
+        <Class IRI="#ProfesionSalud"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#tieneOficio"/>
         <Class IRI="#Profesion"/>

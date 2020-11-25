@@ -15,11 +15,82 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>file:/C:/Users/Administrador/Documents/U/Inteligentes/VeterinaryOntologies/VeterinaryOntologies/Mascota.owl</Import>
     <Declaration>
+        <Class IRI="#Alergia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Autoimune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cardiovascular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Digestiva"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Enfermedad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genetica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Viral"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#puedeEnfermar"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#esGrave"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moquillo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Parvovirosis"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Alergia"/>
+        <Class IRI="#Enfermedad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Autoimune"/>
+        <Class IRI="#Enfermedad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardiovascular"/>
+        <Class IRI="#Enfermedad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Digestiva"/>
+        <Class IRI="#Enfermedad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genetica"/>
+        <Class IRI="#Enfermedad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Viral"/>
+        <Class IRI="#Enfermedad"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Viral"/>
+        <NamedIndividual IRI="#Moquillo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Viral"/>
+        <NamedIndividual IRI="#Parvovirosis"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#puedeEnfermar"/>
+        <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#puedeEnfermar"/>
+        <Class IRI="#Enfermedad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad"/>
+        <Class IRI="#Enfermedad"/>
+    </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#esGrave"/>
         <Class IRI="#Enfermedad"/>

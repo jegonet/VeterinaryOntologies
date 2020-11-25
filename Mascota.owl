@@ -35,6 +35,9 @@
     <Declaration>
         <ObjectProperty IRI="#tieneMascota"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mateo"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Animal"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
@@ -55,6 +58,10 @@
         <Class IRI="#Salvaje"/>
         <Class IRI="#Animal"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Perro"/>
+        <NamedIndividual IRI="#Mateo"/>
+    </ClassAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#diagnostica"/>
         <Class IRI="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#SaludAnimales"/>
