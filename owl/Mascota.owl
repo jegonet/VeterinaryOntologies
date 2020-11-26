@@ -13,7 +13,7 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>file:/C:/Users/Administrador/Documents/U/Inteligentes/VeterinaryOntologies/VeterinaryOntologies/Profesion.owl</Import>
+    <Import>file:/C:/Users/Administrador/Documents/U/Inteligentes/VeterinaryOntologies/VeterinaryOntologies/owl/Profesion.owl</Import>
     <Declaration>
         <Class IRI="#Animal"/>
     </Declaration>

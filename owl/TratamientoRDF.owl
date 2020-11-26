@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrador/ontologies/2020/10/Tratamiento2"
+     xml:base="http://www.semanticweb.org/administrador/ontologies/2020/10/Tratamiento2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:Mascota="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#"
+     xmlns:enfermedad="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#"
+     xmlns:tratamiento="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Tratamiento2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#puedeEnfermar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#puedeEnfermar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#identificaEnfermedad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#tieneOficio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#tieneOficio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#tieneVida -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#tieneVida">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#pagaTratamiento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#pagaTratamiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#realizaTratamiento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#realizaTratamiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirAccidente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirAccidente">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirViejo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirViejo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorir"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#pagoPendiente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#pagoPendiente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valorPagoPendiente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valorPagoPendiente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valorTratamiento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valorTratamiento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Animal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Gato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Gato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Perro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Perro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mascota"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Salvaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Salvaje">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Alergia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Alergia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Autoimune -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Autoimune">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Cardiovascular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Cardiovascular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Digestiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Digestiva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Genetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Genetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Viral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Viral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Enfermedad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Contaduria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Contaduria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Ingenieria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Ingenieria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#IngenieriaAmbiental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#IngenieriaAmbiental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Ingenieria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#IngenieriaSistemas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#IngenieriaSistemas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Ingenieria"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Militar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Militar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Profesion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#ProfesionSalud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#SerVivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Invasivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Invasivo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#NoInvasivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#NoInvasivo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Tratamiento"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Perro"/>
+        <enfermedad:puedeEnfermar rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Moquillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Moquillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Viral"/>
+        <enfermedad:esGrave rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</enfermedad:esGrave>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Parvovirosis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#Viral"/>
+        <enfermedad:esGrave rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</enfermedad:esGrave>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#CarlosVeterinario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#CarlosVeterinario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#MariaVeterinaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/oficio#Veterinaria"/>
+        <Mascota:diagnostica rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+        <tratamiento:realizaTratamiento rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#DiagnosticoGeneral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/person#Luis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Luis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#Humano"/>
+        <Mascota:tieneMascota rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#Mateo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Castracion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Castracion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#Invasivo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#DiagnosticoGeneral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#DiagnosticoGeneral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#NoInvasivo"/>
+        <tratamiento:valorTratamiento rdf:datatype="http://www.w3.org/2001/XMLSchema#long">30000</tratamiento:valorTratamiento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valor">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>pagoPendiente</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#realizaTratamiento"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#v"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#h"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#pagoPendiente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#h"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>calcularValorPago</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#realizaTratamiento"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#v"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#tieneMascota"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#h"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valorTratamiento"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#t"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valor"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valorPagoPendiente"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#h"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#valor"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>enfermedadMuerte</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#puedeEnfermar"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/enfermedad#esGrave"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#e"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/Mascota#diagnostica"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#v"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/person#puedeMorirEnfermo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/administrador/ontologies/2020/10/tratamiento#m"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
